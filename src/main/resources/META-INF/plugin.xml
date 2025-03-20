@@ -1,18 +1,31 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.skoch13.pnpmcataloglens</id>
-    <name>pnpm-catalog-lens</name>
-    <vendor>skoch13</vendor>
+    <name>PNPM Catalog Lens</name>
+
+    <vendor email="skoch13@pm.me" url="https://github.com/skoch13">Sergey Kochetkov</vendor>
+
+    <description><![CDATA[
+        <p>Displays actual versions for <a href="https://pnpm.io/catalogs">PNPM Catalogs</a> in your <code>package.json</code> files.</p>
+        <p>The plugin supports both default and named catalogs:</p>
+        <ul>
+            <li>Default catalog: <code>catalog:</code></li>
+            <li>Named catalogs: <code>catalog:catalogName</code></li>
+        </ul>
+        <p><b>Credits:</b></p>
+        <p>Inspired by <a href="https://github.com/antfu/vscode-pnpm-catalog-lens">vscode-pnpm-catalog-lens</a> by Anthony Fu.</p>
+    ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.json</depends>
+    <depends>org.jetbrains.plugins.yaml</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <depends>JavaScript</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.skoch13.pnpmcataloglens.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <lang.foldingBuilder language="JSON" implementationClass="com.github.skoch13.pnpmcataloglens.folding.PnpmCatalogFoldingBuilder"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.skoch13.pnpmcataloglens.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        <listener class="com.github.skoch13.pnpmcataloglens.listeners.PnpmWorkspaceActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
 </idea-plugin>
