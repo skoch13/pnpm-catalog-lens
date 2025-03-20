@@ -9,6 +9,10 @@
 
 <!-- Plugin description -->
 Displays actual versions for [PNPM catalogs](https://pnpm.io/catalogs) in your `package.json` files.
+<!-- Plugin description end -->
+
+![pnpm-catalog-lens](https://github.com/user-attachments/assets/cdc82e61-5c36-42ac-b5e6-40a92c001a97)
+
 
 The plugin supports both default and named catalogs:
 
