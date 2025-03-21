@@ -1,11 +1,14 @@
-![Build](https://github.com/skoch13/pnpm-catalog-lens/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-
 <p align="center">
   <img src="./res/logo.png" height="150" alt="pnpm-lens-logo">
 </p>
+
 <h1 align="center">PNPM Catalog Lens <sup>IntelliJ Platform</sup></h1>
+
+<p align="center">
+<img src="https://github.com/skoch13/pnpm-catalog-lens/workflows/Build/badge.svg">
+<a href="https://plugins.jetbrains.com/plugin/26883"><img src="https://img.shields.io/jetbrains/plugin/v/26883.svg"></a>
+<a href="https://plugins.jetbrains.com/plugin/26883"><img src="https://img.shields.io/jetbrains/plugin/d/26883.svg"></a>
+</p>
 
 <!-- Plugin description -->
 Displays actual versions for [PNPM catalogs](https://pnpm.io/catalogs) in your `package.json` files.
